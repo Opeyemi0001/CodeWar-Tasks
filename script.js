@@ -58,3 +58,23 @@ function accum(s) {
 };
 
 console.log(accum("opeyemi"));
+
+
+// Given an integral number, determine if it's a square number:
+// The tests will always use some integral number, so don't worry about that in dynamic typed languages.
+
+// Examples
+// -1  =>  false
+//  0  =>  true
+//  3  =>  false
+//  4  =>  true
+// 25  =>  true
+// 26  =>  false
+
+function isSquare(n){
+  if ( n < 0 ) return false; // Negative numbers cannot be perfect squares
+  const sqrt = Math.sqrt(n); // Calculate the square root of n
+  return Number.isInteger(sqrt); // Check if the square root is an integer
+}
+
+console.log(isSquare(25));

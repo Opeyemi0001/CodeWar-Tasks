@@ -60,7 +60,7 @@ function accum(s) {
 console.log(accum("opeyemi"));
 
 
-// Given an integral number, determine if it's a square number:
+// (6) Given an integral number, determine if it's a square number:
 // The tests will always use some integral number, so don't worry about that in dynamic typed languages.
 
 // Examples
@@ -78,3 +78,16 @@ function isSquare(n){
 }
 
 console.log(isSquare(25));
+
+
+// (7) Trolls are attacking your comment section!
+// A common way to deal with this situation is to remove all of the vowels from the trolls' comments, neutralizing the threat.
+// Your task is to write a function that takes a string and return a new string with all vowels removed.
+// For example, the string "This website is for losers LOL!" would become "Ths wbst s fr lsrs LL!".
+// Note: for this kata y isn't considered a vowel.
+
+function disemvowel(str){
+  return str.replace(/[aeiouAEIOU]/g, "");
+}
+
+console.log(disemvowel("This websites is for losers LOL!"));

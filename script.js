@@ -117,3 +117,25 @@ function highAndLow(numbers) {
 }
 
 console.log(highAndLow('1 4 2 -5 6'));
+
+
+
+// Check to see if a string has the same amount of 'x's and 'o's. 
+// The method must return a boolean and be case insensitive. 
+// The string can contain any char.
+
+// Examples input/output:
+// XO("ooxx") => true
+// XO("xooxx") => false
+// XO("ooxXm") => true
+// XO("zpzpzpp") => true // when no 'x' and 'o' is present should return true
+// XO("zzoo") => false
+
+function XO(str) {
+  const normalized = str.toLowerCase() //convert the string lowercase
+  const xCount = (normalized.match(/x/g) || []).length; //count x's using RegEx
+  const oCount = (normalized.match(/o/g) || []).length; //count x's using RegEx
+  return xCount === oCount; // check if the counts equal
+}
+
+console.log(XO("ooxx"));

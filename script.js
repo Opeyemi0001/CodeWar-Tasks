@@ -6,11 +6,13 @@
 const countVowels = str => [...str.toLowerCase()].filter(firstLet => "aeiou".includes(firstLet)).length;
 console.log(countVowels("Oipeyemd"));
 
+
 // (2) Even or odd
 // Create a function that takes an integer as an argument and returns
 // "Even" for even numbers or "Odd" for odd numbers.
 const checkNumber = Number => Number % 2 === 0 ? "Even" : "Odd";
 console.log(checkNumber(5));
+
 
 // (3) Get the middle character
 // You are going to be given a word. Your job is to return the middle character of the word.
@@ -28,6 +30,7 @@ function getMiddle(word) {
 }
 console.log(getMiddle("Three"));
 
+
 // (4) Very simple, given a number (integer / decimal / both depending on the language),
 // find its opposite (additive inverse).
 
@@ -41,6 +44,7 @@ function opposite(number) {
   return -number;
 }
 console.log(opposite(3));
+
 
 // (5) The examples below show you how to write function accum:
 
@@ -93,8 +97,6 @@ function disemvowel(str){
 console.log(disemvowel("This websites is for losers LOL!"));
 
 
-
-
 // (8) In this little assignment you are given a string of space separated numbers, 
 // and have to return the highest and lowest number.
 
@@ -119,8 +121,7 @@ function highAndLow(numbers) {
 console.log(highAndLow('1 4 2 -5 6'));
 
 
-
-// Check to see if a string has the same amount of 'x's and 'o's. 
+// (9) Check to see if a string has the same amount of 'x's and 'o's. 
 // The method must return a boolean and be case insensitive. 
 // The string can contain any char.
 
@@ -139,3 +140,18 @@ function XO(str) {
 }
 
 console.log(XO("ooxx"));
+
+
+// (10) Welcome. In this kata, you are asked to square every digit of a number and concatenate them.
+// For example, if we run 9119 through the function, 811181 will come out, because 92 is 81 and 12 is 1. (81-1-1-81)
+// Example #2: An input of 765 will/should return 493625 because 72 is 49, 62 is 36, and 52 is 25. (49-36-25)
+// Note: The function accepts an integer and returns an integer.
+// Happy Coding!
+
+function squareDigits(num) {
+  return Number(
+    num.toString().split('').map(digit => Number(digit) ** 2).join('')
+  );
+}
+
+console.log(squareDigits(123));

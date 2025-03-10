@@ -204,7 +204,9 @@ function isIsogram(str){
 }
 console.log(isIsogram("daddy"));
 
-// In this kata you will create a function that takes a list of non-negative integers
+
+
+// (16) In this kata you will create a function that takes a list of non-negative integers
 // and strings and returns a new list with the strings filtered out.
 
 // Example
@@ -216,3 +218,18 @@ function filter_list (lst) {
   return lst.filter((item)=> typeof item === "number");
 }
 console.log(filter_list([1, 2, 3, "a", "d"]));
+
+
+
+// (17) Given an array of integers your solution should find the smallest integer.
+
+// For example:
+// Given [34, 15, 88, 2] your solution will return 2
+// Given [34, -345, -1, 100] your solution will return -345
+// You can assume, for the purpose of this kata, that the supplied array will not be empty
+
+function findSmallestInt(arr) {
+  return Math.min(...arr);
+}
+
+console.log(findSmallestInt([34, 12, -6, 56]));

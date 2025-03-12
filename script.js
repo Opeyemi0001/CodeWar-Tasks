@@ -234,7 +234,7 @@ function findSmallestInt(arr) {
 
 console.log(findSmallestInt([34, 12, -6, 56]));
 
-// Create a function that returns the sum of the two lowest positive 
+// (18) Create a function that returns the sum of the two lowest positive 
 // numbers given an array of minimum 4 positive integers. 
 // No floats or non-positive integers will be passed.
 
@@ -247,3 +247,35 @@ function sumTwoSmallestNumbers(numbers) {
   
 }
 console.log(sumTwoSmallestNumbers([3, 5,1,6,2]))
+
+
+// (19) Write a function that accepts a non-negative integer n and a string s as parameters,
+// and returns a string of s repeated exactly n times.
+
+// Examples (input -> output)
+// 6, "I"     -> "IIIIII"
+// 5, "Hello" -> "HelloHelloHelloHelloHello"
+
+function repeatStr(n, s) {
+  return s.repeat(n);
+}
+
+console.log(repeatStr(6, "i"));
+
+
+// Implement a function that accepts 3 integer values a, b, c.
+// The function should return true if a triangle can be built with
+// the sides of given length and false in any other case.
+// (In this case, all triangles must have surface greater than 0 to be accepted).
+
+// Examples:
+// Input -> Output
+// 1,2,2 -> true
+// 4,2,3 -> true
+// 2,2,2 -> true
+// 1,2,3 -> false
+
+function isTriangle (a,b,c) {
+  return a > 0 && b > 0 && c > 0 && (a + b > c) && (a + c > b) && (b + c > a);
+}
+console.log(isTriangle(1,2,2));

@@ -263,7 +263,7 @@ function repeatStr(n, s) {
 console.log(repeatStr(6, "i"));
 
 
-// Implement a function that accepts 3 integer values a, b, c.
+// (20) Implement a function that accepts 3 integer values a, b, c.
 // The function should return true if a triangle can be built with
 // the sides of given length and false in any other case.
 // (In this case, all triangles must have surface greater than 0 to be accepted).
@@ -279,3 +279,24 @@ function isTriangle (a,b,c) {
   return a > 0 && b > 0 && c > 0 && (a + b > c) && (a + c > b) && (b + c > a);
 }
 console.log(isTriangle(1,2,2));
+
+
+
+
+// (21) You might know some pretty large perfect squares. But what about the NEXT one?
+// Complete the findNextSquare method that finds the next integral perfect square after the one passed as a parameter. 
+// Recall that an integral perfect square is an integer n such that sqrt(n) is also an integer.
+// If the argument is itself not a perfect square then return either -1 or an empty value like None or null,
+// depending on your language. You may assume the argument is non-negative.
+
+// Examples ( Input --> Output )
+// 121 --> 144
+// 625 --> 676
+// 114 --> -1  #  because 114 is not a perfect square
+
+function findNextSquare(sq) {
+  const sqrt = Math.sqrt(sq);
+  const nextSqrt = Number.isInteger(sqrt) ? Math.pow(sqrt + 1, 2) : -1 || null ;
+  return nextSqrt;
+}
+console.log(findNextSquare(121));

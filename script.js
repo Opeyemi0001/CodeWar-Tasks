@@ -347,3 +347,49 @@ function rowSumOddNumbers(n) {
   return n**3;
 }
 console.log(rowSumOddNumbers(3));
+
+
+// Create a function named divisors/Divisors that takes an integer
+//  n > 1 and returns an array with all of the integer's divisors
+//  (except for 1 and the number itself), from smallest to largest. 
+//  If the number is prime return the string '(integer) is prime' 
+//  (null in C#, empty table in COBOL) (use Either String a in Haskell 
+//   and Result<Vec<u32>, String> in Rust).
+
+// Examples:
+// divisors(12) --> [2, 3, 4, 6]
+// divisors(25) --> [5]
+// divisors(13) --> "13 is prime"
+
+
+
+function divisors(n) {
+  let result = [];
+  
+  for (let i = 2; i <= n / 2; i++) {
+    if (n % i === 0) {
+      result.push(i);
+    }
+  }
+  
+  return result.length ? result : `${n} is prime`;
+}
+console.log(divisors(24))
+
+
+
+// In this simple assignment you are given a number and have to make it negative.
+//  But maybe the number is already negative?
+
+// Examples
+// makeNegative(1);    // return -1
+// makeNegative(-5);   // return -5
+// makeNegative(0);    // return 0
+// makeNegative(0.12); // return -0.12
+
+function makeNegative(num) {
+  // Code?
+  return num > 0 ? -num : num;
+}
+
+console.log(makeNegative(45))

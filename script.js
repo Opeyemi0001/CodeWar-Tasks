@@ -304,7 +304,7 @@ console.log(findNextSquare(121));
 
 
 
-// Usually when you buy something, you're asked whether your credit card number,
+// (22) Usually when you buy something, you're asked whether your credit card number,
 // phone number or answer to your most secret question is still correct.
 //  However, since someone could look over your shoulder, 
 // you don't want that shown on your screen. Instead, we mask it.
@@ -330,7 +330,7 @@ console.log(maskify("234567756553536655"));
 
 
 
-// Given the triangle of consecutive odd numbers:
+// (23) Given the triangle of consecutive odd numbers:
 
 //              1
 //           3     5
@@ -349,7 +349,8 @@ function rowSumOddNumbers(n) {
 console.log(rowSumOddNumbers(3));
 
 
-// Create a function named divisors/Divisors that takes an integer
+
+// (24) Create a function named divisors/Divisors that takes an integer
 //  n > 1 and returns an array with all of the integer's divisors
 //  (except for 1 and the number itself), from smallest to largest. 
 //  If the number is prime return the string '(integer) is prime' 
@@ -378,7 +379,7 @@ console.log(divisors(24))
 
 
 
-// In this simple assignment you are given a number and have to make it negative.
+// (25) In this simple assignment you are given a number and have to make it negative.
 //  But maybe the number is already negative?
 
 // Examples
@@ -392,4 +393,4 @@ function makeNegative(num) {
   return num > 0 ? -num : num;
 }
 
-console.log(makeNegative(45))
+console.log(makeNegative(-45))

@@ -300,3 +300,50 @@ function findNextSquare(sq) {
   return nextSqrt;
 }
 console.log(findNextSquare(121));
+
+
+
+
+// Usually when you buy something, you're asked whether your credit card number,
+// phone number or answer to your most secret question is still correct.
+//  However, since someone could look over your shoulder, 
+// you don't want that shown on your screen. Instead, we mask it.
+
+// Your task is to write a function maskify, 
+// which changes all but the last four characters into '#'.
+
+// Examples (input --> output):
+// "4556364607935616" --> "############5616"
+//      "64607935616" -->      "#######5616"
+//                "1" -->                "1"
+//                 "" -->                 ""
+
+// // "What was the name of your first pet?"
+// "Skippy" --> "##ippy"
+// "Nananananananananananananananana Batman!" -->
+// "####################################man!"
+
+function maskify (str) {
+  return str.length > 4 ? "#".repeat(str.length - 4) + str.slice(-4) : str; 
+}
+console.log(maskify("234567756553536655"));
+
+
+
+// Given the triangle of consecutive odd numbers:
+
+//              1
+//           3     5
+//        7     9    11
+//    13    15    17    19
+// 21    23    25    27    29
+// ...
+// Calculate the sum of the numbers in the nth row of this triangle (starting at index 1) e.g.: (Input --> Output)
+
+// 1 -->  1
+// 2 --> 3 + 5 = 8
+
+function rowSumOddNumbers(n) {
+  return n**3;
+}
+console.log(rowSumOddNumbers(3));

@@ -397,7 +397,7 @@ console.log(makeNegative(-45))
 
 
 
-// It's pretty straightforward. 
+// (26) It's pretty straightforward. 
 // Your goal is to create a function that removes the first and last characters
 // of a string. You're given one parameter, the original string. You don't have
 // to worry about strings with less than two characters.
@@ -408,7 +408,7 @@ function removeChar(str){
 console.log(removeChar("hello"))
 
 
-// Write a function that removes the spaces from the string, 
+// (27) Write a function that removes the spaces from the string, 
 // then return the resultant string.
 
 // Examples (Input -> Output):
@@ -424,7 +424,7 @@ console.log(noSpace("jshdh sunwn hsjns"));
 
 
 
-// Complete the method that takes a boolean value and return a 
+// (28) Complete the method that takes a boolean value and return a 
 // "Yes" string for true, or a "No" string for false.
 
 function boolToWord( bool ){
@@ -433,7 +433,7 @@ function boolToWord( bool ){
 console.log(boolToWord(false))
 
 
-// We need a function that can transform a number (integer) into a string.
+// (29) We need a function that can transform a number (integer) into a string.
 // What ways of achieving this do you know?
 
 // Examples (input --> output):
@@ -445,3 +445,30 @@ function numberToString(num) {
   return num.toString();
 }
 console.log(numberToString(100))
+
+
+// (30) Your task is to create a function that does four basic mathematical operations.
+// The function should take three arguments - operation(string/char), value1(number), value2(number). 
+// The function should return result of numbers after applying the chosen operation.
+
+// Examples(Operator, value1, value2) --> output
+// ('+', 4, 7) --> 11
+// ('-', 15, 18) --> -3
+// ('*', 5, 5) --> 25
+// ('/', 49, 7) --> 7
+
+function basicOp(operation, value1, value2) {
+  switch (operation) {
+    case "+":
+      return value1 + value2;
+    case "-":
+      return value1 - value2;
+    case "*":
+      return value1 * value2;
+    case "/":
+      return value1 / value2;
+    default:
+      return "Invalid operator";
+  }
+}
+console.log(basicOp("/", 10, 5));

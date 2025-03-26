@@ -550,3 +550,28 @@ function maps(x) {
   return x.map((num)=> num * 2);
 }
 console.log(maps([1, 5, 3]));
+
+
+
+// Complete the solution so that it reverses the string passed into it.
+
+// 'world'  =>  'dlrow'
+// 'word'   =>  'drow'
+
+function solution(str) {
+  return str.split("").reverse().join('');
+}
+console.log(solution("world"));
+
+
+// Complete the solution so that it returns true if the first argument(string) passed in ends with the 2nd argument (also a string).
+
+// Examples:
+
+// solution('abc', 'bc') // returns true
+// solution('abc', 'd') // returns false
+
+function arguments(str, ending) {  
+  return str.endsWith(ending);
+}
+console.log(arguments("abcd", "c"));

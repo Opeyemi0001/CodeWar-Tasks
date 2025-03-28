@@ -575,3 +575,34 @@ function arguments(str, ending) {
   return str.endsWith(ending);
 }
 console.log(arguments("abcd", "c"));
+
+
+
+// It's bonus time in the big city! The fatcats are rubbing their paws in anticipation... 
+// but who is going to make the most money?
+// Build a function that takes in two arguments (salary, bonus). 
+// Salary will be an integer, and bonus a boolean.
+// If bonus is true, the salary should be multiplied by 10. 
+// If bonus is false, the fatcat did not make enough money and must receive only his stated salary.
+// Return the total figure the individual will receive as a 
+// string prefixed with "£" (= "\u00A3", JS, Go, Java, Scala, and Julia), "$"
+//  (C#, C++, Dart, Ruby, Clojure, Elixir, PHP, Python, Haskell, and Lua) or "¥" (Rust).
+
+
+function bonusTime(salary, bonus ) {
+  return "£" + (bonus ? salary * 10 : salary);
+}
+console.log(bonusTime(100, true));
+
+
+// Write a function to convert a name into initials. 
+// This kata strictly takes two words with one space in between them.
+// The output should be two capital letters with a dot separating them.
+// It should look like this:
+// Sam Harris => S.H
+// patrick feeney => P.F
+
+function abbrevName(name) {
+  return name.split(" ").map((word)=> word[0].toUpperCase()).join(".");
+}
+console.log(abbrevName("Opeyemi Onanuga"));

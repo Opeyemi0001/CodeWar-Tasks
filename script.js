@@ -475,7 +475,7 @@ console.log(basicOp("/", 10, 5));
 
 
 
-// Your task is to write a function which returns the n-th term of the following series, 
+// (31) Your task is to write a function which returns the n-th term of the following series, 
 // which is the sum of the first n terms of the sequence (n is the input parameter).
 
 // Series: 1+ 1/4 + 1/7 + 1/10 + 1/13 + 1/16 + …
@@ -504,7 +504,7 @@ function SeriesSum(n) {
 console.log(SeriesSum(2));
 
 
-// Nathan loves cycling.
+// (32) Nathan loves cycling.
 // Because Nathan knows it is important to stay hydrated, 
 // he drinks 0.5 litres of water per hour of cycling.
 // You get given the time in hours and you need to 
@@ -521,7 +521,7 @@ function litres(time) {
 console.log(litres(6.7));
 
 
-// The first century spans from the year 1 up to and including the year 100, 
+// (33) The first century spans from the year 1 up to and including the year 100, 
 // the second century - from the year 101 up to and including the year 200, etc.
 
 // Task
@@ -540,7 +540,7 @@ console.log(century(1900));
 
 
 
-// Given an array of integers, return a new array with each value doubled.
+// (34) Given an array of integers, return a new array with each value doubled.
 
 // For example:
 
@@ -553,7 +553,7 @@ console.log(maps([1, 5, 3]));
 
 
 
-// Complete the solution so that it reverses the string passed into it.
+// (35) Complete the solution so that it reverses the string passed into it.
 
 // 'world'  =>  'dlrow'
 // 'word'   =>  'drow'
@@ -564,7 +564,7 @@ function solution(str) {
 console.log(solution("world"));
 
 
-// Complete the solution so that it returns true if the first argument(string) passed in ends with the 2nd argument (also a string).
+// (36) Complete the solution so that it returns true if the first argument(string) passed in ends with the 2nd argument (also a string).
 
 // Examples:
 
@@ -578,7 +578,7 @@ console.log(arguments("abcd", "c"));
 
 
 
-// It's bonus time in the big city! The fatcats are rubbing their paws in anticipation... 
+// (37) It's bonus time in the big city! The fatcats are rubbing their paws in anticipation... 
 // but who is going to make the most money?
 // Build a function that takes in two arguments (salary, bonus). 
 // Salary will be an integer, and bonus a boolean.
@@ -595,7 +595,7 @@ function bonusTime(salary, bonus ) {
 console.log(bonusTime(100, true));
 
 
-// Write a function to convert a name into initials. 
+// (38) Write a function to convert a name into initials. 
 // This kata strictly takes two words with one space in between them.
 // The output should be two capital letters with a dot separating them.
 // It should look like this:
@@ -606,3 +606,45 @@ function abbrevName(name) {
   return name.split(" ").map((word)=> word[0].toUpperCase()).join(".");
 }
 console.log(abbrevName("Opeyemi Onanuga"));
+
+
+
+
+// Deoxyribonucleic acid, DNA is the primary information storage molecule in biological systems. 
+// It is composed of four nucleic acid bases Guanine ('G'), Cytosine ('C'), Adenine ('A'), and Thymine ('T').
+// Ribonucleic acid, RNA, is the primary messenger molecule in cells. 
+// RNA differs slightly from DNA its chemical structure and contains no Thymine. 
+// In RNA Thymine is replaced by another nucleic acid Uracil ('U').
+
+// Create a function which translates a given DNA string into RNA.
+
+// For example:
+// "GCAT"  =>  "GCAU"
+// The input string can be of arbitrary length - in particular, it may be empty. 
+// All input is guaranteed to be valid, i.e. each input string will only ever consist of 'G', 'C', 'A' and/or 'T'.
+
+function dnaToRna(dna) {
+  return dna.replace(/T/g, "U");
+}
+console.log(dnaToRna("GCAT"));
+
+
+
+// Consider an array/list of sheep where some sheep may be missing from their place. 
+// We need a function that counts the number of sheep present in the array (true means present).
+
+// For example,
+// [true,  true,  true,  false,
+//   true,  true,  true,  true ,
+//   true,  false, true,  false,
+//   true,  false, false, true ,
+//   true,  true,  true,  true ,
+//   false, false, true,  true]
+// The correct answer would be 17.
+
+// Hint: Don't forget to check for bad values like null/undefined
+
+function countSheep(arrayOfSheep) {
+  return arrayOfSheep.filter(Boolean).length;
+}
+console.log(countSheep([true, false, true, true, false, true]));

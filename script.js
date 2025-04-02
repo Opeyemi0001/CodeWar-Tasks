@@ -648,3 +648,49 @@ function countSheep(arrayOfSheep) {
   return arrayOfSheep.filter(Boolean).length;
 }
 console.log(countSheep([true, false, true, true, false, true]));
+
+
+
+// Given an array of ones and zeroes, convert the equivalent binary value to an integer.
+// Eg: [0, 0, 0, 1] is treated as 0001 which is the binary representation of 1.
+// Examples:
+
+// Testing: [0, 0, 0, 1] ==> 1
+// Testing: [0, 0, 1, 0] ==> 2
+// Testing: [0, 1, 0, 1] ==> 5
+// Testing: [1, 0, 0, 1] ==> 9
+// Testing: [0, 0, 1, 0] ==> 2
+// Testing: [0, 1, 1, 0] ==> 6
+// Testing: [1, 1, 1, 1] ==> 15
+// Testing: [1, 0, 1, 1] ==> 11
+// However, the arrays can have varying lengths, not just limited to 4.
+
+function binaryArrayNumbers(arr) {
+  return parseInt(arr.join(""), 2);
+}
+console.log(binaryArrayNumbers([0, 1, 0, 1]));
+
+
+
+// Given an array of integers, remove the smallest value. 
+// Do not mutate the original array/list. 
+// If there are multiple elements with the same value, 
+// remove the one with the lowest index. 
+// If you get an empty array/list, return an empty array/list.
+
+// Don't change the order of the elements that are left.
+// Examples
+// * Input: [1,2,3,4,5], output = [2,3,4,5]
+// * Input: [5,3,2,1,4], output = [5,3,2,4]
+// * Input: [2,2,1,2,1], output = [2,2,2,1]
+
+
+function removesmallest(numbers) {
+  if (numbers.length === 0 ) return [];
+
+  const min = Math.min(...numbers);
+  const minIndex = numbers.indexOf(min);
+  return numbers.filter((_, index) => index !== minIndex);
+}
+
+console.log(removesmallest([5, 3, 2, 1, 4]));

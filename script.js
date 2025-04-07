@@ -610,7 +610,7 @@ console.log(abbrevName("Opeyemi Onanuga"));
 
 
 
-// Deoxyribonucleic acid, DNA is the primary information storage molecule in biological systems. 
+// (39) Deoxyribonucleic acid, DNA is the primary information storage molecule in biological systems. 
 // It is composed of four nucleic acid bases Guanine ('G'), Cytosine ('C'), Adenine ('A'), and Thymine ('T').
 // Ribonucleic acid, RNA, is the primary messenger molecule in cells. 
 // RNA differs slightly from DNA its chemical structure and contains no Thymine. 
@@ -630,7 +630,7 @@ console.log(dnaToRna("GCAT"));
 
 
 
-// Consider an array/list of sheep where some sheep may be missing from their place. 
+// (40) Consider an array/list of sheep where some sheep may be missing from their place. 
 // We need a function that counts the number of sheep present in the array (true means present).
 
 // For example,
@@ -651,7 +651,7 @@ console.log(countSheep([true, false, true, true, false, true]));
 
 
 
-// Given an array of ones and zeroes, convert the equivalent binary value to an integer.
+// (41) Given an array of ones and zeroes, convert the equivalent binary value to an integer.
 // Eg: [0, 0, 0, 1] is treated as 0001 which is the binary representation of 1.
 // Examples:
 
@@ -672,7 +672,7 @@ console.log(binaryArrayNumbers([0, 1, 0, 1]));
 
 
 
-// Given an array of integers, remove the smallest value. 
+// (42) Given an array of integers, remove the smallest value. 
 // Do not mutate the original array/list. 
 // If there are multiple elements with the same value, 
 // remove the one with the lowest index. 
@@ -697,7 +697,7 @@ console.log(removesmallest([5, 3, 2, 1, 4]));
 
 
 
-// Given a random non-negative number, you have to return 
+// (43) Given a random non-negative number, you have to return 
 // the digits of this number within an array in reverse order.
 
 // Example (Input => Output):
@@ -708,3 +708,60 @@ function digitize(n) {
   return n.toString().split("").reverse().map(Number);
 }
 console.log(digitize(35231));
+
+
+
+
+// (44) Given two numbers and an arithmetic operator (the name of it, as a string),
+//  return the result of the two numbers having that operator used on them.
+// a and b will both be positive integers, and a will always be the first 
+// number in the operation, and b always the second.
+
+// The four operators are "add", "subtract", "divide", "multiply".
+
+// A few examples:(Input1, Input2, Input3 --> Output)
+
+// 5, 2, "add"      --> 7
+// 5, 2, "subtract" --> 3
+// 5, 2, "multiply" --> 10
+// 5, 2, "divide"   --> 2.5
+// Try to do it without using if statements!
+
+function aritmetic(a, b, operator) {
+  switch(operator) {
+    case "add":
+      return a + b;
+    case "subtract":
+      return a - b;
+    case "multiply":
+      return a * b;
+    case "divide":
+      return a / b;
+    default:
+     return "Invalid operator";
+  }
+}
+console.log(aritmetic(5, 2, "add"));
+
+
+
+
+// Create a class Ball. Ball objects should accept 
+// one argument for "ball type" when instantiated.
+// If no arguments are given, ball objects should instantiate 
+// with a "ball type" of "regular."
+
+// ball1 = new Ball();
+// ball2 = new Ball("super");
+
+// ball1.ballType     //=> "regular"
+// ball2.ballType     //=> "super"
+
+
+const footBall = function(ballType) {
+  this.ballType = ballType || "regular";
+}
+ball1 = new footBall();
+ball2 = new footBall("super");
+
+console.log(ball2.ballType); // regular

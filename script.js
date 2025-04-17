@@ -746,7 +746,7 @@ console.log(aritmetic(5, 2, "add"));
 
 
 
-// Create a class Ball. Ball objects should accept 
+// (45) Create a class Ball. Ball objects should accept 
 // one argument for "ball type" when instantiated.
 // If no arguments are given, ball objects should instantiate 
 // with a "ball type" of "regular."
@@ -769,7 +769,7 @@ console.log(ball2.ballType); // regular
 
 
 
-// #Make them bark
+// (46) #Make them bark
 // You have been hired by a dogbreeder to write a program to keep record of his dogs.
 // You've already made a constructor Dog, so no one has to hardcode every puppy.
 // The work seems to be done. It's high time to collect the payment.

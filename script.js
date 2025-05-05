@@ -841,7 +841,7 @@ questions.forEach(function(q) {
 
 
 
-// Write a program that finds the summation of every number from 1 to num (both inclusive).
+// (47) Write a program that finds the summation of every number from 1 to num (both inclusive).
 // The number will always be a positive integer greater than 0. Your function only needs 
 // to return the result, what is shown between parentheses in the example below is
 // how you reach that result and it's not part of it, see the sample tests.
@@ -862,7 +862,7 @@ console.log(summation(8));
 
 
 
-// You take your son to the forest to see the monkeys. 
+// (48) You take your son to the forest to see the monkeys. 
 // You know that there are a certain number there (n), 
 // but your son is too young to just appreciate the full number, 
 // he has to start counting them from 1.
@@ -885,7 +885,7 @@ console.log(monkeyCount(10));
 
 
 
-// Create a function which answers the question "Are you playing banjo?".
+// (49) Create a function which answers the question "Are you playing banjo?".
 // If your name starts with the letter "R" or lower case "r", you are playing banjo!
 
 // The function takes a name as its only argument, and returns one of the following strings:
@@ -900,7 +900,7 @@ function areYouPlayingBanjo(name ) {
 console.log(areYouPlayingBanjo("Rita"));
 
 
-// Write a function that takes a single non-empty string of only lowercase 
+// (50) Write a function that takes a single non-empty string of only lowercase 
 // and uppercase ascii letters (word) as its argument, and returns an ordered 
 // list containing the indices of all capital (uppercase) letters in the string.
 
@@ -923,7 +923,7 @@ console.log(capitals("CodEWaRs"));
 
 
 
-// We need a simple function that determines if a plural is needed or not.
+// (51) We need a simple function that determines if a plural is needed or not.
 //  It should take a number, and return true if a plural should be used with 
 //  that number or false if not. This would be useful when printing out a 
 //  string such as 5 minutes, 14 apples, or 1 sun.
@@ -942,7 +942,7 @@ console.log(isPural(4))
 
 
 
-// Kids drink toddy.
+// (52) Kids drink toddy.
 // Teens drink coke.
 // Young adults drink beer.
 // Adults drink whisky.
@@ -974,7 +974,7 @@ console.log(peopleWithAgeDrink(20));
 
 
 
-// Write a function that takes an array of words and
+// (53) Write a function that takes an array of words and
 // smashes them together into a sentence and returns the sentence.
 // You can ignore any need to sanitize words or add punctuation, but
 // you should add spaces between each word. Be careful, there shouldn't
@@ -990,7 +990,7 @@ function smash(words) {
 console.log(smash(['hello', 'world', 'this', 'is', 'great']))
 
 
-// Task:
+// (54) Task:
 // Given a non-negative integer, 3 for example, return a string with a 
 // murmur: "1 sheep...2 sheep...3 sheep...".
 //  Input will always be valid, i.e. no negative integers.
@@ -1006,7 +1006,7 @@ console.log(countSheep(5))
 
 
 
-// Given a string, you have to return a string in which each character (case-sensitive) is repeated once.
+// (55) Given a string, you have to return a string in which each character (case-sensitive) is repeated once.
 
 // Examples (Input -> Output):
 // * "String"      -> "SSttrriinngg"
@@ -1018,3 +1018,27 @@ function doubleChar(str) {
   return str.split("").map((char)=> char.repeat(2)).join("");
 }
 console.log(doubleChar("world"));
+
+
+
+
+// If we list all the natural numbers below 10 that are multiples 
+// of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
+// Finish the solution so that it returns the sum of all the 
+// multiples of 3 or 5 below the number passed in.
+// Additionally, if the number is negative, return 0.
+// Note: If the number is a multiple of both 3 and 5, only count it once.
+
+
+function solution(number) {
+  if (number < 0) return 0;
+  let sum = 0;
+  for (let i = 0; i < number; i++) {
+    if (i % 3 === 0 || i % 5 === 0) {
+      sum += i;
+    }
+  }
+  return sum;
+}
+
+console.log(solution(20));

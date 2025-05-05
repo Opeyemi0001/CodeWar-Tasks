@@ -1022,7 +1022,7 @@ console.log(doubleChar("world"));
 
 
 
-// If we list all the natural numbers below 10 that are multiples 
+// (56) If we list all the natural numbers below 10 that are multiples 
 // of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
 // Finish the solution so that it returns the sum of all the 
 // multiples of 3 or 5 below the number passed in.
@@ -1042,3 +1042,23 @@ function solution(number) {
 }
 
 console.log(solution(20));
+
+
+
+// (57) Given n, take the sum of the digits of n. 
+// If that value has more than one digit, continue reducing in this 
+// way until a single-digit number is produced. 
+// The input will be a non-negative integer.
+
+// Examples
+//     16  -->  1 + 6 = 7
+//    942  -->  9 + 4 + 2 = 15  -->  1 + 5 = 6
+
+function singleDigitSum(n) {
+  while (n >= 10) {
+    n = n.toString().split("").reduce((sum, digit) => sum + Number(digit), 0);
+  }
+  return n;
+}
+
+console.log(singleDigitSum(942));
